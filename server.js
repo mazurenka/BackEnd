@@ -1,6 +1,8 @@
-let counter = 0
+const http = require('http')
 
-setInterval(() => {
-    counter ++
-    console.log(counter)
-}, 1000)
+const server = http.createServer( (request, response) => {
+    response.write('hey yo!')
+    response.end()
+} )
+
+server.listen(3003)
